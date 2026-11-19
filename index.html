@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="data:," />
+    <title>Epsilon</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="loginScreen">
+      <form class="logincard" id="loginForm" autocomplete="off">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
+          <span class="lbrand">Epsilon</span>
+          <button class="btn secondary small" id="loginLangBtn" type="button">العربية</button>
+        </div>
+        <h1 id="loginTitle">Sign in to Epsilon</h1>
+        <p class="lsub" id="loginSub">Use the username and password your admin gave you.</p>
+        <label class="fl" for="loginUser" id="loginUserLabel">Username</label>
+        <input id="loginUser" type="text" autocomplete="username" autocapitalize="none" spellcheck="false">
+        <label class="fl" for="loginPass" id="loginPassLabel">Password</label>
+        <input id="loginPass" type="password" autocomplete="current-password">
+        <div class="loginerr" id="loginErr" role="alert"></div>
+        <button class="btn" id="loginBtn" type="submit" style="width:100%;margin-top:16px">Sign in</button>
+        <p class="lsub" id="noSignupNote" style="margin-top:12px"></p>
+        <p class="lsub" id="deviceNote" style="margin-top:6px"></p>
+      </form>
+      <form class="logincard" id="setupForm" autocomplete="off" style="display:none">
+        <div class="lbrand">Epsilon</div>
+        <h1 id="setupTitle">Set up your admin account</h1>
+        <p class="lsub" id="setupSub"></p>
+        <label class="fl" for="setupUser" id="setupUserLabel">Username</label>
+        <input id="setupUser" type="text" autocomplete="username" autocapitalize="none" spellcheck="false">
+        <label class="fl" for="setupPass" id="setupPassLabel">Password</label>
+        <input id="setupPass" type="password" autocomplete="new-password">
+        <label class="fl" for="setupPass2" id="setupPass2Label">Confirm password</label>
+        <input id="setupPass2" type="password" autocomplete="new-password">
+        <div class="loginerr" id="setupErr" role="alert"></div>
+        <button class="btn" id="setupBtn" type="submit" style="width:100%;margin-top:16px">Create admin account &amp; sign in</button>
+        <p class="lsub" id="setupNoSignup" style="margin-top:12px"></p>
+      </form>
+      <form class="logincard" id="changeForm" autocomplete="off" style="display:none">
+        <div class="lbrand">Epsilon</div>
+        <h1 id="changeTitle">Set your own password</h1>
+        <p class="lsub" id="changeSub"></p>
+        <label class="fl" for="changePass" id="changePassLabel">New password</label>
+        <input id="changePass" type="password" autocomplete="new-password">
+        <label class="fl" for="changePass2" id="changePass2Label">Confirm password</label>
+        <input id="changePass2" type="password" autocomplete="new-password">
+        <div class="loginerr" id="changeErr" role="alert"></div>
+        <button class="btn" id="changeBtn" type="submit" style="width:100%;margin-top:16px">Save password &amp; sign in</button>
+      </form>
+    </div>
+    <div id="appShell" style="display:none">
+    <header class="topbar">
+      <button class="iconbtn" id="menuBtn" aria-label="Menu">&#9776;</button>
+      <span class="brand">Epsilon</span>
+      <span class="spacer"></span>
+      <span class="userchip" id="currentUserChip"></span>
+      <button class="iconbtn" id="langBtn" type="button">العربية</button>
+      <button class="iconbtn" id="logoutBtn" type="button">Sign out</button>
+    </header>
+    <div class="layout">
+      <nav class="side" id="sideNav" aria-label="Main"></nav>
+      <main id="app" tabindex="-1"></main>
+    </div>
+    </div>
+    <div id="printDoc"></div>
+    <div id="toast" role="status"></div>
+    <div id="modalRoot"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
